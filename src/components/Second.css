@@ -1,0 +1,115 @@
+.secondParentDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* height: 382px; */
+    
+    font-weight: 500;
+    /* background-color: blueviolet; */
+}
+
+.secondChildDiv{
+    margin-top: 4rem;
+    width: 83.33vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: #00000026 1.99px 1.99px 2.6px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    padding: 2rem 2.5rem;
+    /* background-color: aqua; */
+    
+}
+
+.sdHeadDiv{
+    text-align: left;
+    margin-top: -5px;
+    /* background-color: #FF624D; */
+}
+
+.sdHeadDiv > p{
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0px;
+    align-items: center;
+}
+
+.sdHeadDiv > p:first-child{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 0px;
+    /* background-color:rebeccapurple; */
+
+}
+
+.sdSubDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.summaryDiv, .recomDiv{
+    text-align: left;
+    align-items: center;
+}
+
+
+.summary, .recommendation{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 0px;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+
+.summarySubDiv{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.summarySubDiv> div{
+    margin-left: 15px;
+}
+
+.ideaIcon{
+    height: 37px;
+    width: 37px;
+    background-color: #FED500;
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+}
+
+.downTriangle{
+    height: 37px;
+    width: 37px;
+    background-color: #FF624D;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 5px;
+}
+
+.upTriangle{
+    height: 37px;
+    width: 37px;
+    background-color: #4DFF54;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 5px;
+}
+
+
+
+.recomDiv{
+
+}
