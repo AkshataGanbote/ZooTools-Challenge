@@ -1,0 +1,167 @@
+.thirdParentDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.thirdChildDiv{
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    width: 83.33vw;
+    height: 135vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    grid-template-rows: repeat(2, 1fr); /* Two rows with equal height */
+    gap: 45px; 
+    /* box-shadow: #00000026 1.99px 1.99px 2.6px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 2rem 2.5rem; */
+}
+
+.gridItemDiv{
+    box-shadow: #00000026 1.99px 1.99px 2.6px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 2rem 2.5rem;
+
+    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seeMoreBtn{
+    width : 13vw;
+    height: 3rem;
+    /* padding: 5px 10px; */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+/***** Box 1 *****/
+
+
+.gridHeadDiv1{
+    
+    padding: 0;
+    margin-bottom: 70px;
+    margin-top: -15px;
+    height: 0px; /*Adding vertical space  */
+    background-color: darkcyan;
+}
+
+.gridTableDiv{
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    /* background-color: chartreuse; */
+  }
+  
+  th{
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 0px;
+    
+    /* background-color: chartreuse; */
+  }
+
+  td {
+    border: none;
+    /* padding: 8px; */
+
+    padding: 40px 5px 0px 0px;
+    font-size: 1.18rem;
+    font-weight: 500;
+    
+    /* background-color: cornflowerblue; */
+  }
+  
+  /* Optional styling for table header background color */
+  thead th {
+    
+  }
+  
+/***** Box 2 *****/
+.gridHeadDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+    
+    /* background-color: crimson; */
+}
+
+/* .gridBtnDiv{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.gridActivBtn, .gridNonActivBtn{
+    width : 7vw;
+    height: 3rem;
+    /* padding: 5px 10px; */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #F2F2F2;
+    margin-right: 5px;
+
+}
+
+.gridNonActivBtn{
+    width : 5.5vw;
+    margin-right: 0px;
+    font-weight: 500;
+    text-align: right;
+
+    background-color: red;
+    background-color: #FFFFFF;
+}
+
+.gridChartDiv{
+    width: 450px;
+    height : 320px;
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: blue; */
+}
+
+.gridChart{
+    height: 100%;
+    /* background-color: pink; */
+}
+
+.gridChartValues{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+    /* background-color: chocolate; */
+}

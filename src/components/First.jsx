@@ -1,7 +1,7 @@
 import React from 'react';
 import './First.css';
 import { Bar } from "react-chartjs-2";
-import { Data } from "./Data";
+import { FirstComponentData } from "./Data";
 import {
     Chart as ChartJS,
     BarElement, 
@@ -22,9 +22,9 @@ ChartJS.register(
 
 const First = () => {
     const data = {
-        labels: Data.map((data) => data.date),
+        labels: FirstComponentData.map((data) => data.date),
         datasets: [{
-            data: Data.map((data) => data.signups),
+            data: FirstComponentData.map((data) => data.signups),
             backgroundColor: '#FED500',
             borderSkipped: false,
             borderRadius: 7,

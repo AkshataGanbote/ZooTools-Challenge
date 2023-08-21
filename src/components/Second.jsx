@@ -36,7 +36,7 @@ const Second = () => {
                 </div>
                 <div className='recomDiv'>
                     <p className='recommendation'>Recommendation</p>
-                    <p><strong>Make sure to promote and share your form</strong></p>
+                    <p><strong>Make sure to promote and <a href="/">share your form</a></strong></p>
                     <p><strong>Congrats! This is huge. Keep giving rewards for your users.</strong></p>
                 </div>
             </div>

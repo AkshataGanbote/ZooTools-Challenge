@@ -1,4 +1,4 @@
-export const Data = [
+export const FirstComponentData = [
     {
       date: 'August 1',
       signups: 500,
