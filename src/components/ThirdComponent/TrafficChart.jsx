@@ -16,8 +16,9 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
+
 
 const labels = ['Google', 'Twitter', 'Facebook', 'LinkedIn', 'YouTube', 'Other'];
 const data = {
@@ -32,26 +33,40 @@ const data = {
     }],
 };
 
-const innerBarText = {
+const plugins    = {
     id : 'innerBarText',
-    afterDatasetsDraw(chart, args, pluginOption){
+    afterDatasetsDraw(chart, args, pluginOptions){
         const {ctx, data, chartArea : {left}, scales: {x, y} } = chart;
         ctx.save();
 
-        ctx.font = '12px bolder sans-serif';
+        ctx.font = 'bolder 12px sans-serif';
         ctx.fillStyle= 'gray';
         // ctx.fillText('Google', x-position, y-position)
-        ctx.fillText('Test', 200, 200);
-        ctx.textAlign = 'left';
-        ctx.fillStyle = '#333';
-        ctx.textBaseline = 'middle';
+        ctx.fillText('Test', 10, 10)
     }
 }
 
 const options = {
     maintainAspectRatio: false,
-    indexAxis: 'y',
     responsive: true,
+    indexAxis: 'y',
+    
+    
+    // plugins: {
+    //     datalabels: {
+    //       display: true,
+    //       color: "black",
+    //       anchor: "end",
+    //       offset: -20,
+    //       align: "start"
+    //     },
+    //     legend: {
+    //         display: false,
+    //     },
+    // },
+
+    
+
     // plugins: {
     //     innerBarText,
     //     legend: {
@@ -61,9 +76,8 @@ const options = {
     //         display: false,
     //     },
     // },
-    plugins : [innerBarText],
-    animation : [innerBarText],
 
+    
     scales: {
         // horizontal
         x: {
@@ -80,8 +94,8 @@ const options = {
         // vertical
         y: {
             beginAtZero: true,
+            // ticks: {mirror: true,},
             ticks : {display : false}, //Remove scale
-            ticks : {mirror : true, }, 
             grid: {
                 display: false,
                 drawTicks : false, //Remove scale
@@ -90,7 +104,7 @@ const options = {
             
         },
     },
-
+    
     
 };
 
@@ -98,7 +112,7 @@ const options = {
 
 export function TrafficChart() {
   return (
-    <Bar data={data} options={options} 
+    <Bar data={data} options={options} plugins = {plugins}
     />
   );
 }

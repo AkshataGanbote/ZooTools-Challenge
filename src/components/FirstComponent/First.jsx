@@ -1,7 +1,7 @@
 import React from 'react';
 import './First.css';
 import { Bar } from "react-chartjs-2";
-import { FirstComponentData } from "./Data";
+import { Data } from "./Data";
 import {
     Chart as ChartJS,
     BarElement, 
@@ -22,14 +22,17 @@ ChartJS.register(
 
 const First = () => {
     const data = {
-        labels: FirstComponentData.map((data) => data.date),
+        labels: Data.map((data) => data.date),
         datasets: [{
-            data: FirstComponentData.map((data) => data.signups),
+            label : 'Signups',
+            data: Data.map((data) => data.signups),
             backgroundColor: '#FED500',
             borderSkipped: false,
-            borderRadius: 7,
-            barThickness: 20,
+            borderRadius: 8,
+            // barThickness: 20,
+            barPercentage : 0.6, //Size of Bars -> Responsive also
             hoverBackgroundColor : '#FED500',
+            
         }]
     }
 
@@ -46,32 +49,52 @@ const First = () => {
             // horizontal
             
             x: {
-                beginAtZero: true,
-                ticks : {display : false}, //Remove scale
-                grid: {
-                    display: false,
-                    drawTicks : false, //Remove scale
-                    drawBorder: false, //Remove scale
-
-                },
-                
+              beginAtZero: true,
+              ticks : {display : false,}, 
+              grid: {
+                  display: false,
+                  drawTicks : false, 
+                  drawBorder: false, 
+              },
+              border : {display : false},
                
             },
             // vertical
             y: {
-                beginAtZero: true,
-                ticks : {display : false}, //Remove scale
-                grid: {
-                    display: true,
-                    drawTicks : false, //Remove scale
-                    drawBorder: false //Remove scale
+              beginAtZero: true,
+              ticks : {display : false}, 
+              grid: {
+                  display: true,
+                  drawTicks : false, 
+                  drawBorder: false, 
+                  border : false,
+              },
+              // 
+              border: {
+                  dash: [2,2],
+              }, 
+
+                /*
+                afterBuildTicks: axis => {
+                  let values = axis.ticks.map(t => t.value);
+                  let max = Math.max(...values);
+                  let min = Math.min(...values);
+                  axis.ticks = [
+                    { value: min + (max - min) * 0.25 },
+                    { value: min + (max - min) * 0.75 },
+                    { value: min + (max - min) * 0.75 },
+                    { value: min + (max - min) * 0.75 },
+                  ]
                 },
-                // 
-                border: {
-                    dash: [2,2],
-                }, 
+
+                ticks: {
+                  callback: (v, i) => i ? 'more' : 'less'
+                }
+                */
+                
             },
         },
+        
     }
 
     return (
@@ -91,7 +114,10 @@ const First = () => {
 
           <div className="ftChartDiv">
             <div className='ftParticipants'>
-                <p>100,000 <span className="material-symbols-outlined" >group_add</span></p>
+              <div className='ftParticipantsHead'>
+                <p>100,000 </p>
+                <span className="material-symbols-outlined" >group_add</span>
+              </div>
                 <p>Participants</p>
             </div>
             
@@ -99,9 +125,8 @@ const First = () => {
                 <Bar 
                     data={data} 
                     options={options} 
-                    
+                    style={{backgroundColor : '#FFFFFF'}}
                 >
-
                 </Bar>
             </div>
           </div>

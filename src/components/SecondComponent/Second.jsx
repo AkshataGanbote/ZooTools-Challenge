@@ -1,8 +1,8 @@
 import React from 'react';
 import './Second.css';
-import idea1 from '../icons/idea1.png'
-import upTriangle from '../icons/upTriangle.png'
-import downTriangle from '../icons/downTriangle.png'
+import idea1 from '../../icons/idea1.png'
+import upTriangle from '../../icons/upTriangle.png'
+import downTriangle from '../../icons/downTriangle.png'
 
 const Second = () => {
   return (

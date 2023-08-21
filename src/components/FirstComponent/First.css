@@ -1,0 +1,268 @@
+.firstParentDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    /* background-color: blueviolet; */
+}
+
+.firstChildDiv{
+    width: 1260px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* background-color: aqua; */
+}
+
+.ftHeadDiv{
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    align-items: center;
+    /* background-color: chartreuse; */
+}
+
+.ftLeftDiv{
+    width : 32.55vw;
+    text-align: left;
+
+    /* background-color: blue; */
+}
+.ftLeftDiv > p{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.ftRightDiv{
+    height: 3rem;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-evenly;
+
+    width : 330px;
+    text-align: right;
+    align-items: center; /*To align vertically*/
+    border-radius: 10px;
+    box-shadow: #00000026 0px 1.98px 0px;
+}
+
+.ftRightDiv > button{
+    /* width : 70px; */
+    padding : 0px 15px;
+    height: 2rem;
+    /* padding: 5px 10px; */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    align-items: center; /*To align vertically*/
+    text-align: center;
+    color: #646A75;
+    background-color: #f4f7fa;
+    /* background-color: red; */
+    
+}
+
+.ftRightDiv >:nth-child(3), .ftRightDiv > button:hover{
+    background-color: #E2E3E8;
+}
+
+
+.ftChartDiv{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    height: 80%;
+    box-shadow: #00000026 1.99px 1.99px 2.6px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    
+    /* background-color: thistle; */
+    
+}
+
+.ftParticipants{
+    text-align: left;
+    padding: 0.5rem 2.5rem ;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.ftParticipantsHead{
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.ftParticipantsHead + p{
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0px;
+    align-items: center;
+    
+    margin-top: 5px;
+}
+
+.ftParticipantsHead > p:first-child{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 0px;
+    /* background-color:rebeccapurple; */
+
+}
+
+.material-symbols-outlined {
+  font-size: 2.5rem;
+  line-height: 0px;
+  /* background-color:rebeccapurple; */
+  align-items: center;
+}
+
+.ftChart{
+    /* background-color: darkred; */
+    height: 70%;
+    padding : 0rem 2rem 2rem 2rem;
+}
+
+
+/*  Tablet media */
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    
+    .firstChildDiv{
+        width: 88%;
+        height: 500px;
+        /* background-color: tomato; */
+    }
+
+    .ftLeftDiv{
+        width : 70%;
+        /* background-color: blue; */
+    }
+    
+    .ftLeftDiv > p{
+        font-size: 1.5rem;
+    }
+    
+    .ftRightDiv{
+        height: 2.5rem;
+        width : 28%;
+    }
+
+    .ftRightDiv > button{
+        padding : 0px 5px;
+        height: 1.8rem;
+        font-weight: 600;
+        font-size: 1rem;
+        /* background-color: red; */
+        
+    }
+
+    .ftChartDiv{
+        height: 76%;
+        /* background-color: thistle; */
+    }
+
+    .ftParticipants {
+        padding: 0rem 2.5rem;
+
+    }
+
+    .ftParticipantsHead{
+        width: 160px;
+    }
+    .ftParticipantsHead > p:first-child {
+        font-size: 2rem;
+    }
+
+    .ftParticipantsHead + p {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined {
+        font-size: 2rem;
+    }
+
+    .ftChart{
+        /* background-color: darkred; */
+        height: 70%;
+        padding : 0rem 2.3rem 0.5rem 2.5rem;
+    }
+    
+}
+
+
+/* Mobile Media */
+@media screen and (max-width: 426px){
+
+    .firstChildDiv{
+        width: 88%;
+        height: 400px;
+        /* background-color: tomato; */
+    }
+
+    .ftLeftDiv{
+        width : 70%;
+        /* background-color: blue; */
+    }
+    
+    .ftLeftDiv > p{
+        font-size: 1.2rem;
+    }
+    
+    .ftRightDiv {
+        height: 2.2rem;
+        width: 42%;
+    }
+
+    .ftRightDiv > button {
+        padding: 0px 5px;
+        height: 1.7rem;
+        font-weight: 600;
+        font-size: 0.7rem;
+        /* background-color: red; */
+    }
+
+    .ftChartDiv{
+        height: 78%;
+        /* background-color: thistle; */
+    }
+
+    .ftParticipants {
+        padding: 0.5rem 1.5rem 0rem 1.5rem;
+    }
+
+    .ftParticipantsHead{
+        width: 130px;
+    }
+
+    .ftParticipantsHead > p:first-child {
+        font-size: 1.5rem;
+    }
+
+    .ftParticipantsHead + p {
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1.5rem;
+    }
+
+    .ftChart{
+        /* background-color: darkred; */
+        height: 70%;
+        padding : 0rem 1.5rem 0.5rem 1.5rem;
+    }
+}
