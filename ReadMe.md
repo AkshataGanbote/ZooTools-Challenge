@@ -1,11 +1,9 @@
 # ZooTools Challenge
 
 <h2>👋 Introduction </h2>
-Beautiful responsive page of a ZooTools Platform using ReactJS, Chart.js and CSS. 
+Beautiful responsive page of a ZooTools Platform using React.js, Chart.js, HTML and CSS. 
 
 <h2>▶️ Live Demo  :- <a href="https://zootools-challenge.netlify.app/" target="_blank">Visit </a></h2>
-
-
 
 <h2>😍  Preview </h2>
 
