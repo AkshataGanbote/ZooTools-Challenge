@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 );
 
-const TrafficChart = () => {
+const BehaviourChart = () => {
   const innerBarText = {
     id: "innerBarText",
     afterDatasetDraw(chart, args, pluginOptions) {
@@ -42,7 +42,14 @@ const TrafficChart = () => {
   };
 
   const data = {
-    labels: ["Google", "Twitter", "Facebook", "LinkedIn", "YouTube", "Other"],
+    labels: [
+      "United States",
+      "Germany",
+      "Netherlands",
+      "India",
+      "Japan",
+      "Other",
+    ],
     datasets: [
       {
         data: [30000, 20000, 10000, 5000, 3000, 2000],
@@ -97,4 +104,4 @@ const TrafficChart = () => {
   );
 };
 
-export default TrafficChart;
+export default BehaviourChart;
