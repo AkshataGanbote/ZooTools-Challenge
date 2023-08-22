@@ -1,191 +1,170 @@
-.firstParentDiv{
+.firstParentDiv {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-    /* background-color: blueviolet; */
 }
 
-.firstChildDiv{
+.firstChildDiv {
     width: 85%;
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     /* background-color: aqua; */
 }
 
-.ftHeadDiv{
+.ftHeadDiv {
     display: flex;
     justify-content: space-between;
     height: 20%;
     align-items: center;
-    /* background-color: chartreuse; */
 }
 
-.ftLeftDiv{
-    width : 32.55vw;
+.ftLeftDiv {
+    width: 32.55vw;
     text-align: left;
-
     /* background-color: blue; */
 }
-.ftLeftDiv > p{
+
+.ftLeftDiv>p {
     font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 2rem;
 }
 
-.ftRightDiv{
+.ftRightDiv {
     height: 3rem;
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-evenly;
-
-    width : 330px;
+    width: 330px;
     text-align: right;
-    align-items: center; /*To align vertically*/
+    align-items: center;
     border-radius: 10px;
     box-shadow: #00000026 0px 1.98px 0px;
 }
 
-.ftRightDiv > button{
-    /* width : 70px; */
-    padding : 0px 15px;
+.ftRightDiv>button {
+    padding: 0px 15px;
     height: 2rem;
-    /* padding: 5px 10px; */
     border-radius: 10px;
     border: none;
     cursor: pointer;
-
-
     font-family: 'Karla', sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
-    align-items: center; /*To align vertically*/
+    align-items: center;
     text-align: center;
     color: #646A75;
     background-color: #f4f7fa;
     /* background-color: red; */
-    
+
 }
 
-.ftRightDiv >:nth-child(3), .ftRightDiv > button:hover{
+.ftRightDiv>:nth-child(3),
+.ftRightDiv>button:hover {
     background-color: #E2E3E8;
 }
 
 
-.ftChartDiv{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
+.ftChartDiv {
     height: 80%;
     box-shadow: #00000026 1.99px 1.99px 2.6px;
     background-color: #FFFFFF;
     border-radius: 10px;
     border: none;
-    
-    /* background-color: thistle; */
-    
 }
 
-.ftParticipants{
+.ftParticipants {
     text-align: left;
-    padding: 0.5rem 2.5rem ;
+    padding: 0.5rem 2.5rem;
     align-items: center;
     /* background-color: red; */
 }
 
-.ftParticipantsHead{
+.ftParticipantsHead {
     width: 240px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
 }
 
-.ftParticipantsHead + p{
+.ftParticipantsHead+p {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 0px;
     align-items: center;
-    
     margin-top: 4px;
 }
 
-.ftParticipantsHead > p:first-child{
+.ftParticipantsHead>p:first-child {
     font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 3rem;
     line-height: 0px;
-    /* background-color:rebeccapurple; */
-
 }
 
 .material-symbols-outlined {
-  font-size: 2.5rem;
-  line-height: 0px;
-  /* background-color:rebeccapurple; */
-  align-items: center;
+    font-size: 2.5rem;
+    line-height: 0px;
+    align-items: center;
 }
 
-.ftChart{
-    /* background-color: darkred; */
+.ftChart {
     height: 70%;
-    padding : 0rem 2rem 2rem 2rem;
+    padding: 0rem 2rem 2rem 2rem;
+    /* background-color: blue; */
 }
 
 
-/*  Tablet media */
+/***  Tablet media ***/
+
 @media screen and (min-width: 427px) and (max-width: 768px) {
-    
-    .firstChildDiv{
+
+    .firstChildDiv {
         height: 500px;
-        /* background-color: tomato; */
     }
 
-    .ftLeftDiv{
-        width : 70%;
+    .ftLeftDiv {
+        width: 70%;
         /* background-color: blue; */
     }
-    
-    .ftLeftDiv > p{
+
+    .ftLeftDiv>p {
         font-size: 1.5rem;
     }
-    
-    .ftRightDiv{
+
+    .ftRightDiv {
         height: 2.5rem;
-        width : 28%;
+        width: 28%;
     }
 
-    .ftRightDiv > button{
-        padding : 0px 5px;
+    .ftRightDiv>button {
+        padding: 0px 5px;
         height: 1.8rem;
         font-weight: 600;
         font-size: 1rem;
-        /* background-color: red; */
-        
     }
 
-    .ftChartDiv{
+    .ftChartDiv {
         height: 76%;
-        /* background-color: thistle; */
     }
 
     .ftParticipants {
-        padding: 0rem 2.5rem;
+        padding: 0rem 2rem;
 
     }
 
-    .ftParticipantsHead{
+    .ftParticipantsHead {
         width: 160px;
     }
-    .ftParticipantsHead > p:first-child {
+
+    .ftParticipantsHead>p:first-child {
         font-size: 2rem;
     }
 
-    .ftParticipantsHead + p {
+    .ftParticipantsHead+p {
         font-size: 1.2rem;
     }
 
@@ -193,43 +172,43 @@
         font-size: 2rem;
     }
 
-    .ftChart{
-        /* background-color: darkred; */
+    .ftChart {
         height: 70%;
-        padding : 0rem 2.3rem 0.5rem 2.5rem;
+        padding: 0rem 2rem 0.5rem 2.1rem;
     }
-    
+
 }
 
 
-/* Mobile Media */
-@media screen and (max-width: 426px){
+/***  Mobile media ***/
 
-    .firstChildDiv{
-        height: 400px;
+@media screen and (max-width: 426px) {
+
+    .firstChildDiv {
+        height: 450px;
     }
 
-    .ftLeftDiv{
-        width : 70%;
+    .ftLeftDiv {
+        width: 70%;
     }
-    
-    .ftLeftDiv > p{
+
+    .ftLeftDiv>p {
         font-size: 1.2rem;
     }
-    
+
     .ftRightDiv {
         height: 2.2rem;
         width: 42%;
     }
 
-    .ftRightDiv > button {
+    .ftRightDiv>button {
         padding: 0px 5px;
         height: 1.7rem;
         font-weight: 600;
         font-size: 0.7rem;
     }
 
-    .ftChartDiv{
+    .ftChartDiv {
         height: 78%;
     }
 
@@ -237,15 +216,15 @@
         padding: 0.5rem 1.5rem 0rem 1.5rem;
     }
 
-    .ftParticipantsHead{
+    .ftParticipantsHead {
         width: 130px;
     }
 
-    .ftParticipantsHead > p:first-child {
+    .ftParticipantsHead>p:first-child {
         font-size: 1.5rem;
     }
 
-    .ftParticipantsHead + p {
+    .ftParticipantsHead+p {
         font-size: 1rem;
         margin-top: 2px;
     }
@@ -254,8 +233,8 @@
         font-size: 1.5rem;
     }
 
-    .ftChart{
+    .ftChart {
         height: 70%;
-        padding : 0rem 1.5rem 0.5rem 1.5rem;
+        padding: 0rem 1.5rem 0.5rem 1.5rem;
     }
 }

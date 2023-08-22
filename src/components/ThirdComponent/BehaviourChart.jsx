@@ -34,9 +34,9 @@ const BehaviourChart = () => {
 
       ctx.save();
       data.datasets[0].data.forEach((dataPoint, index) => {
-        ctx.font = "500 22px Karla"; // Font weight size style
+        ctx.font = "500 22px Karla";
         ctx.fillStyle = "#000000";
-        ctx.fillText(data.labels[index], 20, y.getPixelForValue(index) + 5); // +5 Added Top Margin to Name
+        ctx.fillText(data.labels[index], 20, y.getPixelForValue(index) + 7);
       });
     },
   };
@@ -57,6 +57,7 @@ const BehaviourChart = () => {
         borderSkipped: false,
         hoverBackgroundColor: "#FFF5C2",
         borderRadius: 7,
+        barPercentage: 0.95,
       },
     ],
   };
@@ -77,8 +78,8 @@ const BehaviourChart = () => {
         beginAtZero: true,
         grid: {
           display: false,
-          drawTicks: false, //Remove scale
-          drawBorder: false, //Remove scale
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: { display: false },
         border: { display: false },
@@ -88,17 +89,17 @@ const BehaviourChart = () => {
         beginAtZero: true,
         grid: {
           display: false,
-          drawTicks: false, //Remove scale
-          drawBorder: false, //Remove scale
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: { display: false },
-        border: { display: false }, //Remove scale
+        border: { display: false },
       },
     },
   };
 
   return (
-    <div className="horizontal-bar-chart">
+    <div className="barChart">
       <Bar data={data} options={options} plugins={[innerBarText]} />
     </div>
   );

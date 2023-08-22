@@ -1,8 +1,7 @@
-.secondParentDiv{
+.secondParentDiv {
     display: flex;
     flex-direction: row;
-    justify-content: center;   
-    /* background-color: blueviolet; */
+    justify-content: center;
 }
 
 .secondChildDiv {
@@ -19,36 +18,40 @@
     padding: 0rem 2.5rem 2rem 2.5rem;
 }
 
-.sdHeadDiv{
+.sdHeadDiv {
     text-align: left;
+    /* background-color: pink; */
 }
 
-.sdHeadDiv > p{
+.sdHeadDiv>p {
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 0px;
     align-items: center;
 }
 
-.sdHeadDiv > p:first-child{
+.sdHeadDiv>p:first-child {
     font-weight: 700;
     font-size: 3rem;
     line-height: 0px;
 }
 
-.sdSubDiv{
+.sdSubDiv {
     display: flex;
     justify-content: space-between;
-    width :90%;
+    width: 90%;
     gap: 5%;
+    /* background-color: violet; */
 }
 
-.summaryDiv, .recomDiv{
+.summaryDiv,
+.recomDiv {
     text-align: left;
     align-items: center;
 }
 
-.summary, .recommendation{
+.summary,
+.recommendation {
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 0px;
@@ -57,28 +60,31 @@
 }
 
 
-.summarySubDiv{
+.summarySubDiv {
     display: flex;
     align-items: center;
     margin-bottom: 13px;
+    /* background-color: blue; */
 }
 
-.summaryText{
+.summaryText {
     margin-left: 15px;
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-.recomText1 > p,.recomText2 > p{
+.recomText1>p,
+.recomText2>p {
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-.recomTextMobile{
+.recomTextMobile {
     display: none;
 }
 
-.downTriangle , .upTriangle{
+.downTriangle,
+.upTriangle {
     height: 37px;
     width: 37px;
     padding: 12px;
@@ -86,16 +92,16 @@
     border: none;
 }
 
-.downTriangle{
+.downTriangle {
     background-color: #FF624D;
 }
 
-.upTriangle{
+.upTriangle {
     background-color: #4DFF54;
 
 }
 
-.ideaIcon{
+.ideaIcon {
     height: 37px;
     width: 37px;
     background-color: #FED500;
@@ -105,71 +111,73 @@
 }
 
 a {
-    color : #000000;
+    color: #000000;
 }
 
 
-/*  Tablet media */
+/***  Tablet media ***/
+
 @media screen and (min-width: 427px) and (max-width: 768px) {
 
     .secondChildDiv {
         margin-top: 3.5rem;
         height: 78%;
-        padding: 1rem 2.5rem 2rem 2.5rem;
+        padding: 1rem 2rem 2rem 2rem;
     }
 
-    .sdHeadDiv > p:first-child {
+    .sdHeadDiv>p:first-child {
         font-size: 2rem;
     }
 
-    .sdHeadDiv > p {
+    .sdHeadDiv>p {
         font-size: 1.2rem;
     }
 
-    .sdSubDiv{
-        width : 100%;
+    .sdSubDiv {
+        width: 100%;
+        /* background-color: blue; */
     }
 
-    /* .recomDiv{
-        margin-left: 4%;
-    } */
-
-    .summary, .recommendation {
+    .summary,
+    .recommendation {
         font-size: 1.3rem;
         margin-bottom: 35px;
         margin-top: 30px;
     }
 
-    .summaryText{
+    .summaryText {
         margin-left: 15px;
         font-size: 0.9rem;
         font-weight: 500;
     }
 
-    .recomText1 > p, .recomText2 > p  {
+    .recomText1>p,
+    .recomText2>p {
         font-size: 0.9rem;
     }
-    
-    .recomTextMobile{
+
+    .recomTextMobile {
         display: none;
     }
 
-    .downTriangle , .upTriangle{
+    .downTriangle,
+    .upTriangle {
         height: 30px;
         width: 30px;
         padding: 10px;
         border-radius: 8px;
     }
-    
-    .ideaIcon{
+
+    .ideaIcon {
         height: 30px;
         width: 30px;
         padding: 6.5px;
     }
 }
 
-/* Mobile Media */
-@media screen and (max-width: 426px){
+/***  Mobile media ***/
+
+@media screen and (max-width: 426px) {
 
     .secondChildDiv {
         margin-top: 3.5rem;
@@ -177,62 +185,63 @@ a {
         padding: 1rem 1.5rem 1rem 1.5rem;
     }
 
-    .sdHeadDiv > p:first-child {
+    .sdHeadDiv>p:first-child {
         font-size: 1.5rem;
     }
 
-    .sdHeadDiv > p {
+    .sdHeadDiv>p {
         font-size: 1rem;
         line-height: 15px;
     }
 
-    .sdSubDiv{
-        width : 100%;
+    .sdSubDiv {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .recomDiv{
+    .recomDiv {
         margin-left: 0;
     }
 
-    .summary, .recommendation {
-        font-size: 1.3rem;
+    .summary,
+    .recommendation {
+        font-size: 1.2rem;
         margin-bottom: 35px;
         margin-top: 30px;
     }
 
-    .summaryText{
+    .summaryText {
         margin-left: 15px;
         font-size: 0.9rem;
         font-weight: 500;
     }
 
-    .recomTextMobile{
+    .recomTextMobile {
         display: block;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 700;
     }
 
-    .recomText1{
+    .recomText1 {
         display: none;
     }
 
-    .recomText2 >p{
-        font-size: 1rem;
+    .recomText2>p {
+        font-size: 0.95rem;
     }
 
-    .downTriangle , .upTriangle{
+    .downTriangle,
+    .upTriangle {
         height: 30px;
         width: 30px;
         padding: 10px;
         border-radius: 8px;
     }
-    
-    .ideaIcon{
+
+    .ideaIcon {
         height: 30px;
         width: 30px;
         padding: 6.5px;
     }
 }
-    

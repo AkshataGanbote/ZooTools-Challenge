@@ -1,4 +1,5 @@
 import React from "react";
+import "./Third.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -36,9 +37,7 @@ const SignupChart = () => {
         borderSkipped: false,
         hoverBackgroundColor: "#FFF5C2",
         borderRadius: 7,
-        // barPercentage : 0.8, //Size of Bars -> Responsive also
-
-        // image : ['https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg', 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg', 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg', 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg', 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg', 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg']
+        barPercentage: 0.95,
       },
     ],
   };
@@ -56,25 +55,27 @@ const SignupChart = () => {
 
       ctx.save();
       data.datasets[0].data.forEach((dataPoint, index) => {
-        ctx.font = "500 22px Karla"; // Font weight size style
+        ctx.font = "500 20px Karla"; // Font weight size style
         ctx.fillStyle = "#000000";
-        ctx.fillText(data.labels[index], 20, y.getPixelForValue(index) + 5); // +5 Added Top Margin to Name
+        ctx.fillText(data.labels[index], 20, y.getPixelForValue(index) + 7); // +7 Added Top Margin to Name
       });
     },
   };
 
-  // const countryImages ={
-  //   id: 'countryImages',
-  //   beforeDatasetDraw(chart,args, pluginOptions) {
-  //     const {ctx, data, scales: {x, y}} = chart;
-  //     ctx.save();
+  /*
+  const countryImages ={
+    id: 'countryImages',
+    beforeDatasetDraw(chart,args, pluginOptions) {
+      const {ctx, data, scales: {x, y}} = chart;
+      ctx.save();
 
-  //     const logo = new Image();
-  //     logo.src = 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg';
-  //     // ctx.drawImage(logo, x,y, w, h)
-  //     ctx.drawImage(logo, 0,y.getPixelForValue(0), 30, 30)
-  //   }
-  // }
+      const logo = new Image();
+      logo.src = 'https://image.shutterstock.com/image-vector/coloured-usa-flag-vector-illustration-260nw-450762943.jpg';
+      // ctx.drawImage(logo, x,y, w, h)
+      ctx.drawImage(logo, 0,y.getPixelForValue(0), 30, 30)
+    }
+  }
+  */
 
   const options = {
     maintainAspectRatio: false,
@@ -87,20 +88,14 @@ const SignupChart = () => {
         display: false,
       },
     },
-    // layout : {
-    //   padding : {
-    //     left : 50,
-    //   }
-    // },
-
     indexAxis: "y",
     scales: {
       x: {
         beginAtZero: true,
         grid: {
           display: false,
-          drawTicks: false, //Remove scale
-          drawBorder: false, //Remove scale
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: { display: false },
         border: { display: false },
@@ -110,17 +105,17 @@ const SignupChart = () => {
         beginAtZero: true,
         grid: {
           display: false,
-          drawTicks: false, //Remove scale
-          drawBorder: false, //Remove scale
+          drawTicks: false,
+          drawBorder: false,
         },
         ticks: { display: false },
-        border: { display: false }, //Remove scale
+        border: { display: false },
       },
     },
   };
 
   return (
-    <div className="horizontal-bar-chart">
+    <div className="barChart">
       <Bar data={data} options={options} plugins={[innerBarText]} />
     </div>
   );

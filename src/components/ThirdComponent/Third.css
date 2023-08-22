@@ -1,128 +1,124 @@
-.thirdParentDiv{
+.thirdParentDiv {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.thirdChildDiv{
+.thirdChildDiv {
     margin-top: 5rem;
     margin-bottom: 4rem;
     width: 85%;
-    height: 135%;
-    display: flex;
-    flex-direction: column;
+    height: 1000px;
     justify-content: space-between;
     border: none;
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    grid-template-rows: repeat(2, 1fr); /* Two rows with equal height */
-    gap: 45px; 
-    /* box-shadow: #00000026 1.99px 1.99px 2.6px;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    padding: 2rem 2.5rem; */
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 47.5% 47.5%;
+    gap: 50px;
+    /* background-color: black; */
 }
 
-.gridItemDiv{
+.gridItemDiv {
     box-shadow: #00000026 1.99px 1.99px 2.6px;
     border-radius: 10px;
-    background-color: #FFFFFF;
-    padding: 2rem 2.5rem;
-
+    padding: 1.9rem 2.5rem;
     text-align: left;
-    
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #FFFFFF;
+    width: 100%;
+    /* background-color: aquamarine; */
 }
 
-.seeMoreBtn{
-    width : 13vw;
+.seeMoreBtn {
+    width: 35%;
     height: 3rem;
-    /* padding: 5px 10px; */
     border-radius: 10px;
     border: none;
     cursor: pointer;
-
     font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.15rem;
     text-align: center;
     background-color: #F2F2F2;
+    margin-top: 2%;
 }
 
 /***** Box 1 *****/
 
 
-.gridHeadDiv1{
-    
+.gridHeadDiv1 {
     padding: 0;
     margin-bottom: 70px;
     margin-top: -15px;
-    height: 0px; /*Adding vertical space  */
-    background-color: darkcyan;
+    height: 0px;
+    /* background-color: darkcyan; */
 }
 
-.gridTableDiv{
+.gridHeadDiv1>p {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
 
+.gridTableDiv {
+    margin-top: 10px;
+}
+
+.gridTableTabMobDiv {
+    display: none;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-
     /* background-color: chartreuse; */
-  }
-  
-  th{
+}
+
+th {
     font-size: 1.25rem;
     font-weight: 700;
     text-align: left;
     padding: 0px;
-    
-    /* background-color: chartreuse; */
-  }
+}
 
-  td {
+td {
     border: none;
-    /* padding: 8px; */
-
-    padding: 40px 5px 0px 0px;
+    padding: 35px 5px 0px 0px;
     font-size: 1.18rem;
     font-weight: 500;
-    
-    /* background-color: cornflowerblue; */
-  }
-  
-  /* Optional styling for table header background color */
-  thead th {
-    
-  }
-  
-/***** Box 2 *****/
-.gridHeadDiv{
+}
+
+
+/***** Other 3 Boxes *****/
+.gridHeadDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: -15px;
-    
     /* background-color: crimson; */
 }
 
-/* .gridBtnDiv{
-    display: flex;
-    justify-content: space-between;
-} */
+.gridHeadDiv>div>p {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
 
-.gridActivBtn, .gridNonActivBtn{
-    width : 7vw;
+.gridBtnDiv {
+    width: 50%;
+    display: flex;
+    /* background-color: blueviolet; */
+    justify-content: right;
+}
+
+.gridActivBtn,
+.gridNonActivBtn {
     height: 3rem;
-    /* padding: 5px 10px; */
+    padding: 5px 10px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-
     font-family: 'Karla', sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
@@ -132,36 +128,194 @@ table {
 
 }
 
-.gridNonActivBtn{
-    width : 5.5vw;
+.gridNonActivBtn {
     margin-right: 0px;
     font-weight: 500;
     text-align: right;
-
     background-color: red;
     background-color: #FFFFFF;
 }
 
-.gridChartDiv{
-    width: 450px;
-    height : 320px;
+.gridChartDiv {
+    width: 100%;
+    height: 290px;
     display: flex;
     justify-content: space-between;
-
     /* background-color: blue; */
+    margin-top: -5px;
 }
 
-.gridChart{
+.gridChart {
     height: 100%;
     /* background-color: pink; */
 }
 
-.gridChartValues{
+.gridChartValues {
+
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    
+    justify-content: space-evenly;
+    gap: 0;
+    text-align: right;
     /* background-color: chocolate; */
+}
+
+.gridChartValues>p {
+    padding: 0;
+    margin: 10px 0px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.barChart {
+    width: 40%;
+}
+
+/***  Tablet media ***/
+@media screen and (min-width: 427px) and (max-width: 768px) {
+
+    .thirdChildDiv {
+        grid-template-columns: 46.8% 46.8%;
+        grid-template-rows: 47.5% 47.5%;
+        gap: 35px;
+    }
+
+    .gridItemDiv {
+        padding: 1.9rem 1.8rem;
+    }
+
+    .gridHeadDiv1>p {
+        font-size: 1.3rem;
+    }
+
+    .gridTableDiv {
+        display: none;
+    }
+
+    .gridTableTabMobDiv {
+        display: block;
+    }
+
+    th {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    td {
+        font-size: 0.9rem;
+        width: 50%;
+    }
+
+    .gridHeadDiv>div>p {
+        font-size: 1.3rem;
+    }
+
+    .gridBtnDiv {
+        width: 50%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .gridActivBtn,
+    .gridNonActivBtn {
+        height: 2.3rem;
+        padding: 5px 3px 5px 3px;
+        font-size: 1rem;
+
+    }
+
+    .gridNonActivBtn {
+        margin-right: -4px;
+        padding: 5px 0px 5px 3px;
+        background-color: red;
+        background-color: #FFFFFF;
+    }
+
+    .seeMoreBtn {
+        width: 61%;
+        height: 2.5rem;
+        font-size: 0.95rem;
+        text-align: left;
+        margin-top: 2%;
+    }
+
+    .barChart {
+        width: 61%;
+    }
+
+
+}
+
+/***  Mobile media ***/
+
+@media screen and (max-width: 426px) {
+    
+    .thirdChildDiv {
+        margin-top: 4rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gridItemDiv {
+        padding: 1.9rem 1.5rem;
+    }
+    .gridHeadDiv1>p {
+        font-size: 1.2rem;
+    }
+
+    .gridTableDiv {
+        display: none;
+    }
+
+    .gridTableTabMobDiv {
+        display: block;
+    }
+
+    th {
+        font-size: 0.99rem;
+        font-weight: 700;
+    }
+
+    td {
+        font-size: 0.9rem;
+        width: 50%;
+    }
+
+    .gridHeadDiv>div>p {
+        font-size: 1.2rem;
+    }
+
+    .gridBtnDiv {
+        width: 50%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .gridActivBtn,
+    .gridNonActivBtn {
+        height: 2.3rem;
+        padding: 5px 3px 5px 3px;
+        font-size: 1rem;
+
+    }
+
+    .gridNonActivBtn {
+        margin-right: -4px;
+        padding: 5px 0px 5px 3px;
+        background-color: red;
+        background-color: #FFFFFF;
+    }
+
+    .seeMoreBtn {
+        width: 48%;
+        height: 2.5rem;
+        font-size: 0.95rem;
+        text-align: left;
+        margin-top: 5%;
+    }
+
+    .barChart {
+        width: 60%;
+    }
 }

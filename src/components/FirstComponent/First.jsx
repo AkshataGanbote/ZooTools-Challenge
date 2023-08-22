@@ -11,13 +11,7 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(
-  BarElement,
-  CategoryScale, //x axis - horizontal
-  LinearScale, //y axis - vertical
-  Tooltip,
-  Legend
-);
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const First = () => {
   const data = {
@@ -29,8 +23,7 @@ const First = () => {
         backgroundColor: "#FED500",
         borderSkipped: false,
         borderRadius: 8,
-        // barThickness: 20,
-        barPercentage: 0.6, //Size of Bars -> Responsive also
+        barPercentage: 0.6, //Size of Bars -> Responsive
         hoverBackgroundColor: "#FED500",
       },
     ],
@@ -39,15 +32,42 @@ const First = () => {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-    // Plugin to remove dataset label
+
     plugins: {
       legend: {
         display: false,
       },
+
+      tooltip: {
+        border: {
+          borderRadius: "1px",
+          style: "solid",
+          borderColor: "red",
+        },
+        backgroundColor: "#FFFFFF",
+        // boxShadow: '#00000026 1.99px 1.99px 2.6px',
+        titleFont: {
+          size: "20px",
+          family: "Karla",
+        },
+        titleColor: "#000000",
+        bodyColor: "gray",
+        bodyFont: {
+          size: "15px",
+          family: "Karla",
+        },
+        padding: 15,
+        borderColor: "gray",
+        borderWidth: 0.2,
+        shadow: "red",
+        displayColors: false,
+        xAlign: "center",
+        yAlign: "bottom",
+      },
     },
+
     scales: {
       // horizontal
-
       x: {
         beginAtZero: true,
         ticks: { display: false },
@@ -58,6 +78,7 @@ const First = () => {
         },
         border: { display: false },
       },
+
       // vertical
       y: {
         beginAtZero: true,
@@ -72,24 +93,6 @@ const First = () => {
         border: {
           dash: [2, 2],
         },
-
-        /*
-                afterBuildTicks: axis => {
-                  let values = axis.ticks.map(t => t.value);
-                  let max = Math.max(...values);
-                  let min = Math.min(...values);
-                  axis.ticks = [
-                    { value: min + (max - min) * 0.25 },
-                    { value: min + (max - min) * 0.75 },
-                    { value: min + (max - min) * 0.75 },
-                    { value: min + (max - min) * 0.75 },
-                  ]
-                },
-
-                ticks: {
-                  callback: (v, i) => i ? 'more' : 'less'
-                }
-                */
       },
     },
   };
