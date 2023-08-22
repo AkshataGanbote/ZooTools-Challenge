@@ -1,7 +1,7 @@
 # ZooTools Challenge
 
 <h2>👋 Introduction </h2>
-Beautiful responsive page of a ZooTools Platform using React.js, Chart.js, HTML and CSS. 
+Beautiful responsive page of a ZooTools Platform using React.js, Chart.js, react-chartjs-2, HTML and CSS. 
 
 <h2>▶️ Live Demo  :- <a href="https://zootools-challenge.netlify.app/" target="_blank">Visit </a></h2>
 
@@ -31,6 +31,8 @@ This project uses the following technologies:
 - React.JS
 
 - Chart.JS library
+  
+- react-chartjs-2 library
 
 - HTML
 
